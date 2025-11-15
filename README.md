@@ -5,6 +5,7 @@ Hey! So I was thinking through the problem set again and I'm not sure I did the 
 1. Make it as multi-tenant setup with reasonable load (1m agents online across multiple accounts, so large some small)
 2. Simulate load (100 new conversations / second - 8.64m conversations / day)
 3. Write unit and integration tests to ensure correctness
+4. Graceful handling of errors without crashing the system or failing the entire batch
 
 I introduced some indexing for the agents accounts as a speed up tactic (difference of 7s / 100 conversations to 1ms / 100 conversations on my souped up custom built linux machine)
 

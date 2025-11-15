@@ -39,7 +39,11 @@ func main() {
 				log.Printf("Starting assignment batch %d at %s", tickCounter+1, time.Now().Format("15:04:05"))
 
 				start := time.Now()
-				system.Assign(conversations[tickCounter*100 : (tickCounter+1)*100])
+				_, err := system.Assign(conversations[tickCounter*100 : (tickCounter+1)*100])
+				if err != nil {
+					log.Fatal(err)
+					// We probably should have metrics here to measure failure ans alerting
+				}
 				elapsed := time.Since(start)
 
 				log.Printf("Completed assignment batch %d in %v", tickCounter+1, elapsed)
