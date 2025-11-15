@@ -1,6 +1,6 @@
 # Fun experiment
 
-Hey! So I was thinking through the problem set again and I'm not sure I did what `would you do next` question justice. So I decided to have a bit of fun and flesh out the code with 2 things in mind.
+Hey! So I was thinking through the problem set again and I'm not sure I did the what `would you do next` question justice. So I decided to have a bit of fun and flesh out the code with a few things in mind.
 
 1. Make it as multi-tenant setup with reasonable load (1m agents online across multiple accounts, so large some small)
 2. Simulate load (100 new conversations / second - 8.64m conversations / day)
